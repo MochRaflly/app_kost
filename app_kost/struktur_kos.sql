@@ -7,6 +7,7 @@ CREATE TABLE tb_penghuni (
     nama VARCHAR(100) NOT NULL,
     no_ktp VARCHAR(20) NOT NULL UNIQUE,
     no_hp VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
     tgl_masuk DATE NOT NULL,
     tgl_keluar DATE
 );
@@ -74,9 +75,9 @@ CREATE INDEX idx_bayar_tagihan ON tb_bayar(id_tagihan);
 CREATE INDEX idx_bayar_status ON tb_bayar(status);
 
 -- Sample Data
-INSERT INTO tb_penghuni (nama, no_ktp, no_hp, tgl_masuk, tgl_keluar) VALUES
-('Rafly', '3201010101010001', '081234567890', '2024-01-10', NULL),
-('Cecep', '3201010101010002', '081234567891', '2024-02-01', NULL);
+INSERT INTO tb_penghuni (nama, no_ktp, no_hp, email, tgl_masuk, tgl_keluar) VALUES
+('Rafly', '3201010101010001', '081234567890', 'rafly@email.com', '2024-01-10', NULL),
+('Cecep', '3201010101010002', '081234567891', 'cecep@email.com', '2024-02-01', NULL);
 
 INSERT INTO tb_kamar (nomor, harga) VALUES
 ('A1', 750000),
