@@ -1,0 +1,153 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f6f8fa;
+  color: #222;
+  margin: 0;
+}
+.hero {
+  background: linear-gradient(120deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+.cta-btn {
+  background: #fff;
+  color: #4e54c8;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+  background: #4e54c8;
+  color: #fff;
+}
+.section {
+  padding: 40px 0 30px 0;
+}
+.kamar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+.kamar-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(78,84,200,0.08);
+  padding: 24px 18px;
+  text-align: center;
+  border: 2px solid #eaeaea;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.kamar-card h3 {
+  color: #4e54c8;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+.kamar-card .harga {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+}
+.kamar-card .fasilitas {
+  font-size: 0.95rem;
+  color: #666;
+}
+.kamar-card.kosong {
+  border-color: #4e54c8;
+}
+.kamar-card.terisi {
+  border-color: #ff7675;
+  opacity: 0.7;
+}
+.reminder-section {
+  background: #fff3f3;
+  border-top: 1px solid #ffe0e0;
+}
+.reminder-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+.reminder-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(255,118,117,0.08);
+  border-left: 6px solid #fbc531;
+  min-width: 220px;
+  flex: 1 1 220px;
+  color: #222;
+  transition: border 0.2s;
+}
+.reminder-item.late {
+  border-left: 6px solid #ff7675;
+  background: #fff0f0;
+  color: #c0392b;
+}
+.kontak-section {
+  background: #f6f8fa;
+}
+.kontak-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+.kontak-info > div {
+  flex: 1 1 220px;
+}
+.maps-embed iframe {
+  border-radius: 10px;
+  min-width: 220px;
+}
+footer {
+  background: #4e54c8;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 30px;
+}
+#loader {
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s;
+}
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4e54c8;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media (max-width: 767px) {
+  .hero h1 { font-size: 1.5rem; }
+  .kamar-grid { grid-template-columns: 1fr; }
+  .kontak-info { flex-direction: column; gap: 16px; }
+}
+html {
+  scroll-behavior: smooth;
+} 
